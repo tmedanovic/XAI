@@ -1,0 +1,34 @@
+<div class="xai-generated-reply-container" style="margin-top: 5px">
+    <div class="xai-original-tweet">
+        <%- originalTweetHtml %>
+    </div>
+    <div class="xai-reply-wrapper">
+        <div class="xai-selected-img-wrapper">
+            <img  class="xai-selected-img" />
+            <div style=" text-align: center;">
+                <a class="xai-selected-img-remove">Remove</a>
+            </div>
+        </div>
+        <div style="flex-grow: 1;">
+            <textarea id="gpt-textarea" class="xai-textarea" placeholder="Generate ChatGPT reply by clicking on buttons below" cols="80" rows="5"></textarea>
+        </div>
+    </div>
+    <div id="gpt-options">      
+        <div id="gpt-instructions">
+            <% instructions.forEach(function (inst) { %>
+            <div id="gpt-instructions-cb-wrapper">
+                <input id="<%= inst.key %>" type="checkbox" class="xai-cb-inst" name="<%= inst.key %>" <%= inst.default ? "checked" : "" %> />
+                <label for="<%= inst.key %>"><%= inst.label %></label>
+            </div>
+            <% }) %>
+        </div>    
+        <div id="gpt-choices">
+            <% choices.forEach(function (choice) { %>
+                <button class="tingle-btn tingle-btn--deafult tingle-btn--small xai-btn-choice" data-prompt="<%= choice.prompt %>"><%= choice.label %></button>
+            <% }) %>
+        </div>    
+    </div>
+    <div>
+        <button class="tingle-btn tingle-btn--small xai-btn-img-search">Image search</button>
+    </div>
+</div>

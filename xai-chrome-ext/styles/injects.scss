@@ -1,0 +1,261 @@
+.xai-logo-wrapper {
+    display: block;
+    position: fixed;
+    top: 19px;
+    right: 10px;
+    align-items: center;
+}
+
+.xai-logo-wrapper > span {
+    font-size: 10px; 
+    text-transform: uppercase; 
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif !important; 
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #353539;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.xai-generated-reply-container {
+    padding: 15px;
+}
+
+.xai-generated-reply-text {
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for the button */
+.xai-button {
+    background-color: #3490dc;
+    border: 1px solid #3490dc;
+    color: #ffffff;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.xai-button:focus {
+    background-color: #2779bd;
+    border: 2px solid black;
+}
+
+.xai-button:hover {
+    background-color: #2779bd;
+}
+
+.xai-button:active {
+    background-color: #1c6ca5;
+}
+
+.xai-btn-choice {
+    margin: 5px;
+}
+
+.xai-loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.xai-loading-svg {
+    width: 50px;
+    height: 50px;
+    animation: xaurotate 2s linear infinite;
+}
+
+@keyframes xaurotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// tingle modal font fix 
+
+.tingle-modal-box {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+}
+
+// tingle content class
+
+// .tingle-custom-content .tingle-modal-box > div {
+//     padding-bottom: 5px;
+// }
+
+.tingle-custom-content [data-testid="tweetText"] {
+    color: black !important;
+}
+
+.tingle-btn {
+    border-radius: 5px;
+}
+
+.tingle-btn--small {
+    padding: 0.5rem 1rem !important;
+    margin-left: 0px !important;
+}
+
+
+.xai-tweet-footer-container {
+    border-style: none;
+    padding: 15px;
+    padding-left: 0px;
+}
+
+// toast
+
+.xai-toast-success {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+    background: rgb(116, 226, 116) !important;
+}
+
+#xai-tweet-img-results {
+    height: 50vh;
+    min-height: 300px;
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+
+.xai-img-search-thumb {
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.xai-btn-img-search {
+    width: 100%; 
+    margin-top: 10px;
+    border: 1px solid gray;
+    background: transparent;
+    color: gray;
+    border-radius: 5px;
+}
+
+.xai-img-search-thumb-selected {
+    border: 2px solid rgb(8, 61, 139);
+}
+
+#gpt-options {
+    display: flex;
+    margin-bottom: 5px;
+}
+  
+#gpt-instructions {
+    flex: 0 0 50%;
+}
+  
+#gpt-choices {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.xai-btn-choice {
+    flex: 1 1 0;
+    margin: 5px !important;
+}
+
+.xai-original-tweet {
+    margin-bottom: 15px;
+    border: 2px solid #b9b9b9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.xai-textarea {
+    width: 100%; 
+    height: 100%;
+    resize: none; 
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+}
+
+.xai-textarea:focus {
+    outline: 1px solid #b9b9b9;
+}
+
+.xai-selected-img-wrapper {
+    display: none;
+    margin-right: 5px;
+}
+
+.xai-selected-img {
+    border: 1px solid rgb(185, 185, 185);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.xai-reply-wrapper {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    display: flex;
+    border: 2px solid rgb(185, 185, 185);
+    padding: 12px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.xai-selected-img-remove {
+    color: white;
+    background: #ff7b7b;
+    padding: 3px 5px;
+    border-radius: 5px;
+    display: block;
+}
+
+.xai-image-search-options {
+    display: flex;
+    padding: 11px;
+    background: #e7e6e6;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.xai-image-search-options > * {
+    padding: 5px;
+}
+
+.xai-btn-exec-img-search-wrapper {
+    flex: 0 0 auto;
+}
+  
+.xai-txt-img-search-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+}
+
+.xai-txt-img-search {
+    width: 100%;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;
+}
+
+.xai-img-preview-wrapper {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.xai-img-preview {
+    min-width: 0;
+}

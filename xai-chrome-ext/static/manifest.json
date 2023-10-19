@@ -1,0 +1,60 @@
+{
+  "name": "XAI",
+  "description": "Twitter/X extension for generating tweets with ChatGTP and Twitter API",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [        
+        "https://twitter.com/*",
+        "https://mobile.twitter.com/*",
+        "https://x.com/*"
+    ],
+    "js": [
+        "contentScript.js"
+      ],
+    "css":[
+        "styles/contentScript.css",
+        "styles/tingle.min.css",
+        "styles/spin.css",
+        "styles/toastify.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab", 
+    "storage", 
+    "scripting"
+  ],
+  "options_ui": {
+    "page": "index.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "XAI",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "/icons/16x.png",
+      "32": "/icons/32x.png",
+      "48": "/icons/48x.png",
+      "128": "/icons/128x.png"
+    }
+  },
+  "icons": {
+    "16": "/icons/16x.png",
+    "32": "/icons/32x.png",
+    "48": "/icons/48x.png",
+    "128": "/icons/128x.png"
+  },
+  "web_accessible_resources": [{
+    "resources": ["/images/*"],
+    "matches": [
+      "https://twitter.com/*",
+      "https://mobile.twitter.com/*",
+      "https://x.com/*"
+    ]
+  }]
+}
